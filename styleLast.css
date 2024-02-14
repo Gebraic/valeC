@@ -1,0 +1,74 @@
+@import url(https://fonts.googleapis.com/css?family=Dancing+Script);
+body{
+  background:#212121;
+  color:#F97DC4;
+  font-family: 'Dancing Script', cursive;
+  text-align: center;
+}
+svg path.linear-1 { // stroke works fine, filter doesn't work
+  stroke: white;
+  filter: url(#blur-filter);
+}
+.loading {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0;
+  position: relative; }
+
+.loading svg {
+  height: 100%;
+}
+
+.loading .linear-1{
+  stroke-dasharray:281;
+  -webkit-animation: dash 6s infinite linear forwards;
+}
+.loading .linear-2{
+  stroke-dasharray:300;
+  -webkit-animation: dash 5s infinite linear forwards;
+}
+.loading .linear-3{
+  stroke-dasharray:340;
+  -webkit-animation: dash 4s infinite linear forwards;
+}
+.loading .linear-4{
+  stroke-dasharray:400;
+  -webkit-animation: dash 3s infinite linear forwards;
+}
+
+/*Animation*/
+@-webkit-keyframes dash{ from{stroke-dashoffset:814;} to {stroke-dashoffset:-814;}}
+
+h1 {
+    text-shadow: 2px 2px 5px #E21393;
+}
+a,
+h3 {
+  color: #fff;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  color: #E21393;
+}
+
+.tombol button{
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  animation: anime 1s infinite ease-in-out alternate;
+  -webkit-animation: anime 1s infinite ease-in-out alternate;
+}
+
+@keyframes anime {
+  100%{
+    transform: translateY(10px);
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    -o-transform: translateY(10px);
+  }
+}

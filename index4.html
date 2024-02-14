@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Part 4</title>
+    <link rel="stylesheet" href="style4.css" />
+  </head>
+  <body>
+    <button class="chocolate-button">
+      <div class="crumbs"></div>
+      <span class="bar">
+        <span class="text">Ini tuh Coklat</span>
+      </span>
+    </button>
+
+    <div class="instructions">makan coklatnya [ Klik coklat] <br>
+     isi penuh [ klik latar ] <br><br>
+    <button>
+      <a href="ucapan.html">Lanjut</a>
+    </button>
+    </div>
+
+    <script>
+      console.clear();
+
+      const elButton = document.querySelector(".chocolate-button");
+
+      elButton.addEventListener("mousedown", (event) => {
+        if (!elButton.matches(":focus")) {
+          elButton.style.setProperty("--x", event.offsetX);
+          elButton.style.setProperty("--y", event.offsetY);
+        }
+      });
+    </script>
+  </body>
+</html>
